@@ -2,7 +2,7 @@
 #pragma once
 #include <torch/types.h>
 
-namespace detectron2 {
+namespace roi {
 
 at::Tensor ROIAlign_forward_cpu(
     const at::Tensor& input,
@@ -127,4 +127,4 @@ inline at::Tensor ROIAlign_backward(
       aligned);
 }
 
-} // namespace detectron2
+} // namespace roi

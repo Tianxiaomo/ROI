@@ -2,7 +2,7 @@
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 # import torch
-from detectron2 import _C
+from roi import _C
 
 
 def pairwise_iou_rotated(boxes1, boxes2):

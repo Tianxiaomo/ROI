@@ -6,7 +6,7 @@ from torch import nn
 from torch.autograd.function import Function
 from torch.nn import functional as F
 
-# from detectron2.utils import comm
+# from roi.utils import comm
 
 from .wrappers import BatchNorm2d
 

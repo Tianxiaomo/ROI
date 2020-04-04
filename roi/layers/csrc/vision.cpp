@@ -8,7 +8,7 @@
 #include "nms_rotated/nms_rotated.h"
 #include "ROIAlignRotatedPadding/ROIAlignRotatedPadding.h"
 
-namespace detectron2 {
+namespace roi {
 
 #ifdef WITH_CUDA
 extern int get_cudart_version();
@@ -110,4 +110,4 @@ PYBIND11_MODULE(TORCH_EXTENSION_NAME, m) {
       "Backward pass for Rotated ROI-Align Padding Operator");
 }
 
-} // namespace detectron2
+} // namespace roi

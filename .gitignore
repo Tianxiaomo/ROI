@@ -26,7 +26,7 @@ __pycache__
 _ext
 *.pyc
 *.so
-detectron2.egg-info/
+roi.egg-info/
 build/
 dist/
 wheels/
@@ -51,7 +51,7 @@ wheels/
 .vscode
 
 # project dirs
-/detectron2/model_zoo/configs
+/roi/model_zoo/configs
 /datasets
 /projects/*/datasets
 /models

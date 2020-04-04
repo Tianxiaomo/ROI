@@ -2,7 +2,7 @@
 #pragma once
 #include <torch/types.h>
 
-namespace detectron2 {
+namespace roi {
 
 #ifdef WITH_CUDA
 int deform_conv_forward_cuda(
@@ -374,4 +374,4 @@ inline void modulated_deform_conv_backward(
   AT_ERROR("Not implemented on the CPU");
 }
 
-} // namespace detectron2
+} // namespace roi

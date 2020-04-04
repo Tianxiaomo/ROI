@@ -26,7 +26,7 @@ Apache 2.0 license.
   author =       {Yuxin Wu and Alexander Kirillov and Francisco Massa and
                   Wan-Yen Lo and Ross Girshick},
   title =        {Detectron2},
-  howpublished = {\url{https://github.com/facebookresearch/detectron2}},
+  howpublished = {\url{https://github.com/facebookresearch/roi}},
   year =         {2019}
 }
 ```

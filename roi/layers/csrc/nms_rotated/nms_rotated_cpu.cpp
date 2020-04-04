@@ -2,7 +2,7 @@
 #include "../box_iou_rotated/box_iou_rotated_utils.h"
 #include "nms_rotated.h"
 
-namespace detectron2 {
+namespace roi {
 
 template <typename scalar_t>
 at::Tensor nms_rotated_cpu_kernel(
@@ -70,4 +70,4 @@ at::Tensor nms_rotated_cpu(
   return result;
 }
 
-} // namespace detectron2
+} // namespace roi

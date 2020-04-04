@@ -14,7 +14,7 @@
 #define HOST_DEVICE_INLINE HOST_DEVICE inline
 #endif
 
-namespace detectron2 {
+namespace roi {
 
 namespace {
 
@@ -339,4 +339,4 @@ single_box_iou_rotated(T const* const box1_raw, T const* const box2_raw) {
   return iou;
 }
 
-} // namespace detectron2
+} // namespace roi

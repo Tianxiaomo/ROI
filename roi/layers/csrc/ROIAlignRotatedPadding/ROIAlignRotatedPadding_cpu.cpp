@@ -9,7 +9,7 @@
 // works, if any, using the "legacy" ROIAlignRotated Op.
 // This would make the interface a bit cleaner.
 
-namespace detectron2 {
+namespace roi {
 
 namespace {
 template <typename T>
@@ -238,8 +238,11 @@ void ROIAlignRotatedPaddingForward(
         "ROIs in ROIAlignRotatedPadding do not have non-negative size!");
 
 //    int pooled_width1 = ceil(pooled_height * ((height/sin_theta) * ((sin_theta*sin_theta - cos_theta *cos_theta)/(width*sin_theta - height * cos_theta)) - (cos_theta / sin_theta)));
-    int pooled_width1 = ceil(pooled_height * sin_theta * (height*sin_theta - width * cos_theta)/(width*(sin_theta*sin_theta - cos_theta*cos_theta)-(height*sin_theta - width*cos_theta)));
+//    int pooled_width1 = ceil(pooled_height * sin_theta * (height*sin_theta - width * cos_theta)/(width*(sin_theta*sin_theta - cos_theta*cos_theta)-(height*sin_theta - width*cos_theta)));
 //    int pooled_width1 = pooled_height;
+    int pooled_width1 = ceil((roi_width * pooled_height) / roi_height);
+    pooled_width1 = (pooled_width1 > pooled_width) ? pooled_width : pooled_width1;
+
     T bin_size_h = static_cast<T>(roi_height) / static_cast<T>(pooled_height);
 //    T bin_size_w = static_cast<T>(roi_width) / static_cast<T>(pooled_width);
     T bin_size_w = static_cast<T>(roi_width) / static_cast<T>(pooled_width1);
@@ -521,4 +524,4 @@ at::Tensor ROIAlignRotatedPadding_backward_cpu(
   return grad_input;
 }
 
-} // namespace detectron2
+} // namespace roi

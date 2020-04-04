@@ -15,7 +15,7 @@ assert torch_ver >= [1, 3], "Requires PyTorch >= 1.3"
 
 
 # def get_version():
-#     init_py_path = path.join(path.abspath(path.dirname(__file__)), "detectron2", "__init__.py")
+#     init_py_path = path.join(path.abspath(path.dirname(__file__)), "roi", "__init__.py")
 #     init_py = open(init_py_path, "r").readlines()
 #     version_line = [l.strip() for l in init_py if l.startswith("__version__")][0]
 #     version = version_line.split("=")[-1].strip().strip("'\"")
@@ -89,13 +89,13 @@ def get_extensions():
 # def get_model_zoo_configs() -> List[str]:
 #     """
 #     Return a list of configs to include in package for model zoo. Copy over these configs inside
-#     detectron2/model_zoo.
+#     roi/model_zoo.
 #     """
 #
 #     # Use absolute paths while symlinking.
 #     source_configs_dir = path.join(path.dirname(path.realpath(__file__)), "configs")
 #     destination = path.join(
-#         path.dirname(path.realpath(__file__)), "detectron2", "model_zoo", "configs"
+#         path.dirname(path.realpath(__file__)), "roi", "model_zoo", "configs"
 #     )
 #     # Symlink the config directory inside package to have a cleaner pip install.
 #

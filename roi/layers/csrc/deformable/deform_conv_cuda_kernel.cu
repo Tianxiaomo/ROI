@@ -452,7 +452,7 @@ __global__ void deformable_col2im_coord_gpu_kernel(
 }
 
 
-namespace detectron2 {
+namespace roi {
 
 void deformable_im2col(
     const at::Tensor data_im,
@@ -659,7 +659,7 @@ void deformable_col2im_coord(
       }));
 }
 
-} // namespace detectron2
+} // namespace roi
 
 
 template <typename scalar_t>
@@ -1066,7 +1066,7 @@ __global__ void modulated_deformable_col2im_coord_gpu_kernel(
 }
 
 
-namespace detectron2 {
+namespace roi {
 
 void modulated_deformable_im2col_cuda(
     const at::Tensor data_im,
@@ -1285,4 +1285,4 @@ void modulated_deformable_col2im_coord_cuda(
   }
 }
 
-} // namespace detectron2
+} // namespace roi

@@ -4,7 +4,7 @@ from torch.autograd import Function
 from torch.autograd.function import once_differentiable
 from torch.nn.modules.utils import _pair
 
-from detectron2 import _C
+from roi import _C
 
 
 class _ROIAlign(Function):
@@ -73,7 +73,7 @@ class ROIAlign(nn.Module):
             With `aligned=True`,
             we first appropriately scale the ROI and then shift it by -0.5
             prior to calling roi_align. This produces the correct neighbors; see
-            detectron2/tests/test_roi_align.py for verification.
+            roi/tests/test_roi_align.py for verification.
 
             The difference does not make a difference to the model's performance if
             ROIAlign is used together with conv layers.

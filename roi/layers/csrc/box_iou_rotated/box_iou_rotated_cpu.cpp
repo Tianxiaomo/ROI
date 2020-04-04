@@ -2,7 +2,7 @@
 #include "box_iou_rotated.h"
 #include "box_iou_rotated_utils.h"
 
-namespace detectron2 {
+namespace roi {
 
 template <typename T>
 void box_iou_rotated_cpu_kernel(
@@ -43,4 +43,4 @@ at::Tensor box_iou_rotated_cpu(
   return ious.reshape(shape);
 }
 
-} // namespace detectron2
+} // namespace roi

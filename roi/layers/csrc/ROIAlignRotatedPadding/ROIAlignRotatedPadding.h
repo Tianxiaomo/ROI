@@ -2,7 +2,7 @@
 #pragma once
 #include <torch/types.h>
 
-namespace detectron2 {
+namespace roi {
 
 at::Tensor ROIAlignRotatedPadding_forward_cpu(
     const at::Tensor& input,
@@ -112,4 +112,4 @@ inline at::Tensor ROIAlignRotatedPadding_backward(
       sampling_ratio);
 }
 
-} // namespace detectron2
+} // namespace roi

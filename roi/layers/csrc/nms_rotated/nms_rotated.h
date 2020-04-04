@@ -2,7 +2,7 @@
 #pragma once
 #include <torch/types.h>
 
-namespace detectron2 {
+namespace roi {
 
 at::Tensor nms_rotated_cpu(
     const at::Tensor& dets,
@@ -35,4 +35,4 @@ inline at::Tensor nms_rotated(
   return nms_rotated_cpu(dets, scores, iou_threshold);
 }
 
-} // namespace detectron2
+} // namespace roi

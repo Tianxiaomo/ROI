@@ -2,7 +2,7 @@
 #pragma once
 #include <torch/types.h>
 
-namespace detectron2 {
+namespace roi {
 
 at::Tensor box_iou_rotated_cpu(
     const at::Tensor& boxes1,
@@ -32,4 +32,4 @@ inline at::Tensor box_iou_rotated(
   return box_iou_rotated_cpu(boxes1, boxes2);
 }
 
-} // namespace detectron2
+} // namespace roi

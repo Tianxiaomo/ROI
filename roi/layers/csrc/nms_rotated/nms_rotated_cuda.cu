@@ -5,7 +5,7 @@
 #include <ATen/cuda/CUDAApplyUtils.cuh>
 #include "../box_iou_rotated/box_iou_rotated_utils.h"
 
-using namespace detectron2;
+using namespace roi;
 
 namespace {
 int const threadsPerBlock = sizeof(unsigned long long) * 8;
@@ -69,7 +69,7 @@ __global__ void nms_rotated_cuda_kernel(
   }
 }
 
-namespace detectron2 {
+namespace roi {
 
 at::Tensor nms_rotated_cuda(
     const at::Tensor& dets,
@@ -133,4 +133,4 @@ at::Tensor nms_rotated_cuda(
            .to(order_t.device(), keep.scalar_type())});
 }
 
-} // namespace detectron2
+} // namespace roi

@@ -15,7 +15,7 @@
 #include <cmath>
 #include <vector>
 
-namespace detectron2 {
+namespace roi {
 
 void deformable_im2col(
     const at::Tensor data_im,
@@ -1128,4 +1128,4 @@ void modulated_deform_conv_cuda_backward(
                                   grad_output.size(4)});
 }
 
-} // namespace detectron2
+} // namespace roi

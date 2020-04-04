@@ -9,7 +9,7 @@
 // works, if any, using the "legacy" ROIAlignRotated Op.
 // This would make the interface a bit cleaner.
 
-namespace detectron2 {
+namespace roi {
 
 namespace {
 template <typename T>
@@ -516,4 +516,4 @@ at::Tensor ROIAlignRotated_backward_cpu(
   return grad_input;
 }
 
-} // namespace detectron2
+} // namespace roi

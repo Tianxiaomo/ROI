@@ -395,7 +395,7 @@ void ROIAlignBackward(
 
 } // namespace
 
-namespace detectron2 {
+namespace roi {
 
 at::Tensor ROIAlign_forward_cpu(
     const at::Tensor& input,
@@ -500,4 +500,4 @@ at::Tensor ROIAlign_backward_cpu(
   return grad_input;
 }
 
-} // namespace detectron2
+} // namespace roi
